@@ -1,18 +1,39 @@
-# MetalWorks ERP — Precision Manufacturing & Inventory Platform
+<div align="center">
+
+  # MetalWorks ERP
+  ### Precision Manufacturing Resource Planning & Real-Time Inventory Control
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![Node.js](https://img.shields.io/badge/Node.js-v18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+  [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Pure JavaScript](https://img.shields.io/badge/Stack-100%25%20Pure%20ES%20Modules-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+  <br />
+
+  <img src="docs/images/MetalWorks-ERP.png" alt="MetalWorks ERP Production Dashboard" width="100%" />
+
+  *Modern, Linear- & Vercel-inspired manufacturing ERP dashboard featuring real-time valuation KPI cards, commercial flow analytics, category distribution donut, and an auditable inventory ledger.*
+
+</div>
+
+---
 
 MetalWorks ERP is a full-stack, enterprise-grade manufacturing resource planning (MRP/ERP) and inventory management system designed for small and medium-sized precision fabrication and manufacturing businesses.
 
-Built with a **100% plain JavaScript ES modules** stack (no TypeScript, Python, or MongoDB), it pairs a modern React frontend (inspired by Linear and Vercel) with an ACID-compliant PostgreSQL database engine, auditable append-only ledger, and backend-enforced role-based access control.
+Built with a **100% plain JavaScript ES modules** stack (no TypeScript, Python, or MongoDB), it pairs a modern React frontend with an ACID-compliant PostgreSQL database engine, auditable append-only ledger, decimal-safe financial calculations, and backend-enforced role-based access control.
 
 ---
 
 ## 📋 Table of Contents
-- [System Requirements](#-system-requirements)
-- [How MetalWorks ERP Works](#-how-metalworks-erp-works)
+- [📸 Interface & Dashboard Overview](#-interface--dashboard-overview)
+- [💻 System Requirements](#-system-requirements)
+- [⚙️ How MetalWorks ERP Works](#-how-metalworks-erp-works)
   - [Architecture & Tech Stack](#architecture--tech-stack)
   - [Module Workflows & Business Logic](#module-workflows--business-logic)
   - [Dark & Light Theme System](#dark--light-theme-system)
-- [Installation & Setup Instructions](#-installation--setup-instructions)
+- [🚀 Installation & Setup Instructions](#-installation--setup-instructions)
   - [Step 1: Clone or Navigate to the Project](#step-1-clone-or-navigate-to-the-project)
   - [Step 2: Environment Configuration](#step-2-environment-configuration)
   - [Step 3: Database Server Management](#step-3-database-server-management)
@@ -20,10 +41,25 @@ Built with a **100% plain JavaScript ES modules** stack (no TypeScript, Python, 
   - [Step 5: Run Migrations & Seed Data](#step-5-run-migrations--seed-data)
   - [Step 6: Start the Development Server](#step-6-start-the-development-server)
   - [Step 7: Stopping the Application & Database](#step-7-stopping-the-application--database)
-- [Running Automated Tests](#-running-automated-tests)
-- [Demo User Accounts & Credentials](#-demo-user-accounts--credentials)
-- [Docker Deployment](#-docker-deployment)
-- [Troubleshooting & FAQs](#-troubleshooting--faqs)
+- [🧪 Running Automated Tests](#-running-automated-tests)
+- [👥 Demo User Accounts & Credentials](#-demo-user-accounts--credentials)
+- [🐳 Docker Deployment](#-docker-deployment)
+- [❓ Troubleshooting & FAQs](#-troubleshooting--faqs)
+
+---
+
+## 📸 Interface & Dashboard Overview
+
+The user interface delivers a SaaS-grade operational experience modeled after the clean aesthetics and responsiveness of Linear and Vercel:
+
+| Interface Component | Operational Capability | Key Metrics / Features Visible in Screenshot |
+| :--- | :--- | :--- |
+| **Real-Time KPI Cards** | Live rollup calculated directly from database records | **Valuation**: `$17,091.20` (`+4.2%`), **9 Active SKUs** across `MAIN`, `FAB-1`, and `QUARANTINE` warehouses, **2 Open POs** (`$8,845.00` pending), **2 Work Orders** in production, **1 Inspection** pending. |
+| **Commercial Flow Analytics** | Recharts bar visualization comparing purchase inflows vs. sales outflows | Weekly cashflow tracking comparing supplier purchase commitments against customer fulfillment dispatches. |
+| **Inventory by Category** | Interactive Recharts donut visualization | Real-time valuation breakdown across Raw Sheet Metal (`$6,450`), Structural Steel Profiles (`$4,800`), Fasteners (`$1,241`), and Finished Goods (`$4,600`). |
+| **Auditable Movement Ledger** | Live transactional event stream | Real-time immutable record showing movement timestamps, transaction type (`receipt`, `production_issue`, `transfer_out`), SKU/product name, quantity delta, and operator ID. |
+| **Modern Application Shell** | High-efficiency navigation and workflow controls | Collapsible icon sidebar, `⌘K` global search across records, notification drawer, instant 1-click persona switcher, and Light/Dark/System theme switch. |
+
 
 ---
 

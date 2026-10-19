@@ -16,7 +16,7 @@ const serverProcess = spawn('node', ['src/index.js'], {
 });
 
 // Start Frontend Vite Dev Server
-const clientProcess = spawn('npx', ['vite'], {
+const clientProcess = spawn('npx', ['vite', '--host', '0.0.0.0'], {
   cwd: path.join(rootDir, 'client'),
   stdio: 'inherit',
   env: process.env
